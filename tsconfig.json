@@ -20,7 +20,7 @@
     "paths": {
       "@*": ["src/*"],
       "@test/*": ["src/test/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/sunrise-sunset/components/*"]
     }
   },
   "include": ["src", "e2e"],

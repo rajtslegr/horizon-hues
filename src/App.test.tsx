@@ -3,9 +3,9 @@ import { render, screen, userEvent } from '@test/test-utils';
 import App from '@App';
 
 describe('App', () => {
-  it('the title is visible', () => {
+  it('Geolocation button is visible', () => {
     render(<App />);
-    expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument();
+    expect(screen.getByText(/geolocation/i)).toBeInTheDocument();
   });
 
   it('should increment count on click', async () => {
