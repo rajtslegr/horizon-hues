@@ -15,6 +15,7 @@ specifiers:
   '@vitest/coverage-c8': 0.28.5
   '@vitest/ui': 0.28.5
   autoprefixer: 10.4.13
+  date-fns: ^2.29.3
   eslint: 8.34.0
   eslint-config-airbnb-base: 15.0.0
   eslint-config-airbnb-typescript: 17.0.0
@@ -44,6 +45,7 @@ specifiers:
 
 dependencies:
   '@tanstack/react-query': 4.24.9_biqbaboplfbrettd7655fr4n2y
+  date-fns: 2.29.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-geolocation: 1.1.0_react@18.2.0
@@ -2134,6 +2136,14 @@ packages:
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
     dev: true
+
+  /date-fns/2.29.3:
+    resolution:
+      {
+        integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==,
+      }
+    engines: { node: '>=0.11' }
+    dev: false
 
   /debug/3.2.7:
     resolution:

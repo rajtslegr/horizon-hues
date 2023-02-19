@@ -6,20 +6,25 @@ import { useQuery } from '@tanstack/react-query';
 interface QueryOptions {
   latitude: number;
   longitude: number;
+  date: string;
 }
 
-const fetchSunriseSunset = async ({ latitude, longitude }: QueryOptions) =>
+const fetchSunriseSunset = async ({
+  latitude,
+  longitude,
+  date,
+}: QueryOptions) =>
   fetchFactory<SunriseSunset>(
-    `${Config.baseUrl}lat=${latitude}&lng=${longitude}&timezone=Europe/Prague&date=today`,
+    `${Config.baseUrl}lat=${latitude}&lng=${longitude}&timezone=Europe/Prague&date=${date}`,
   );
 
 const useSunriseSunset = (
-  { latitude, longitude }: QueryOptions,
+  { latitude, longitude, date }: QueryOptions,
   enabled: boolean,
 ) =>
   useQuery<SunriseSunset>(
-    ['sunrise-sunset'],
-    () => fetchSunriseSunset({ latitude, longitude }),
+    [`sunrise-sunset-${latitude}-${longitude}-${date}`],
+    () => fetchSunriseSunset({ latitude, longitude, date }),
     { enabled },
   );
 

@@ -2,27 +2,53 @@ import { useState } from 'react';
 
 import Button from '@button/components/Button';
 import useSunriseSunset from '@sunrise-sunset/hooks/useSunriseSunset';
+import { timeFactory } from '@sunrise-sunset/utils/FormatDate';
+import { format } from 'date-fns';
 import useGeolocation from 'react-hook-geolocation';
 
 const SunriseSunset = () => {
-  const [optInGeolocation, setOptInGeolocation] = useState(false);
+  const [geolocationOptIn, setGeolocationOptIn] = useState(false);
+  const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'));
+  const [isTwentyFourHour, setIsTwentyFourHour] = useState(false);
   const { latitude, longitude } = useGeolocation(
     undefined,
     undefined,
-    optInGeolocation,
+    geolocationOptIn,
   );
-  const { data } = useSunriseSunset(
-    { latitude, longitude },
-    optInGeolocation && !!latitude && !!longitude,
+  const { data, isLoading, refetch } = useSunriseSunset(
+    { latitude, longitude, date },
+    !!latitude && !!longitude && !!date,
   );
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
-      <Button onClick={() => setOptInGeolocation(true)}>geolocation</Button>
-      <div>
-        <p>Sunrise: {data?.results.sunrise}</p>
-        <p>Sunset: {data?.results.sunset}</p>
-      </div>
+      <Button onClick={() => setGeolocationOptIn(true)}>geolocation</Button>
+      <input
+        type="date"
+        value={date}
+        onChange={(event) => {
+          setDate(event.target.value);
+          refetch();
+        }}
+      />
+      <input
+        type="checkbox"
+        checked={isTwentyFourHour}
+        onChange={() => setIsTwentyFourHour(!isTwentyFourHour)}
+      />
+      <label htmlFor="isTwentyFourHour">24-hour</label>
+      {data && (
+        <div>
+          <p>
+            Sunrise:{' '}
+            {timeFactory(date, data?.results.sunrise, isTwentyFourHour)}
+          </p>
+          <p>
+            Sunrise: {timeFactory(date, data?.results.sunset, isTwentyFourHour)}
+          </p>
+        </div>
+      )}
+      {isLoading && <p>loading...</p>}
     </div>
   );
 };
