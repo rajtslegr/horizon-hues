@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Button from '@button/components/Button';
+import { MapPinIcon } from '@heroicons/react/24/solid';
 import useSunriseSunset from '@sunrise-sunset/hooks/useSunriseSunset';
 import { timeFactory } from '@sunrise-sunset/utils/FormatDate';
 import { format } from 'date-fns';
@@ -21,9 +22,15 @@ const SunriseSunset = () => {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <Button onClick={() => setGeolocationOptIn(true)}>geolocation</Button>
+    <div className="flex h-full w-full flex-col items-center justify-center space-y-8 text-neutral-300">
+      <Button
+        aria-label="Geolocation button"
+        onClick={() => setGeolocationOptIn(true)}
+      >
+        <MapPinIcon className="h-6 w-6" />
+      </Button>
       <input
+        className="rounded-lg border-black bg-neutral-700 p-2 text-neutral-300"
         type="date"
         value={date}
         onChange={(event) => {
@@ -31,14 +38,17 @@ const SunriseSunset = () => {
           refetch();
         }}
       />
-      <input
-        type="checkbox"
-        checked={isTwentyFourHour}
-        onChange={() => setIsTwentyFourHour(!isTwentyFourHour)}
-      />
-      <label htmlFor="isTwentyFourHour">24-hour</label>
+      <div className="flex space-x-2">
+        <input
+          type="checkbox"
+          checked={isTwentyFourHour}
+          onChange={() => setIsTwentyFourHour(!isTwentyFourHour)}
+        />
+        <label htmlFor="isTwentyFourHour">24-hour</label>
+      </div>
+
       {data && (
-        <div>
+        <div className="flex space-x-4 uppercase">
           <p>
             Sunrise:{' '}
             {timeFactory(date, data?.results.sunrise, isTwentyFourHour)}
