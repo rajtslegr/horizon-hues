@@ -5,4 +5,4 @@ export const timeFactory = (
   time: string,
   isTwentyFourHour: boolean,
 ) =>
-  format(new Date(`${date} ${time}`), isTwentyFourHour ? 'HH:mm' : 'hh:mm b');
+  format(new Date(`${date} ${time}`), isTwentyFourHour ? 'HH:mm' : 'hh:mm a');
