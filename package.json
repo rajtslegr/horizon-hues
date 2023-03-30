@@ -19,7 +19,7 @@
     "type:check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@heroicons/react": "2.0.16",
+    "@heroicons/react": "2.0.17",
     "@tanstack/react-query": "4.28.0",
     "date-fns": "2.29.3",
     "react": "18.2.0",
