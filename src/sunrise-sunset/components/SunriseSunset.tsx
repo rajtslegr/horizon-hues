@@ -8,7 +8,9 @@ import { roundFloat } from '@sunrise-sunset/utils/RoundFloat';
 import { format } from 'date-fns';
 import useGeolocation from 'react-hook-geolocation';
 
+import DatePicker from './DatePicker';
 import Item from './Item';
+import TwentyFourHourCheckbox from './TwentyFourHourCheckbox';
 
 const SunriseSunset = () => {
   const [geolocationOptIn, setGeolocationOptIn] = useState(false);
@@ -28,24 +30,35 @@ const SunriseSunset = () => {
     !!latitude && !!longitude && !!date,
   );
 
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (!!latitude && !!longitude) {
+      setDate(event.target.value);
+      refetch();
+    }
+  };
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-8 text-neutral-300">
+      {!geolocationOptIn && (
+        <p>Please allow access to geolocation service by clicking the icon.</p>
+      )}
+      {geolocationOptIn && isLoading && <p>Loading...</p>}
+
       {data && (
         <div className="flex flex-col space-y-4 md:space-y-8">
           <Item type="location" time={data?.results.timezone} />
           <div className="flex flex-row space-x-4 md:space-x-16">
             <Item
-              type="sunset"
-              time={timeFactory(date, data?.results.sunset, isTwentyFourHour)}
-            />
-            <Item
               type="sunrise"
               time={timeFactory(date, data?.results.sunrise, isTwentyFourHour)}
+            />
+            <Item
+              type="sunset"
+              time={timeFactory(date, data?.results.sunset, isTwentyFourHour)}
             />
           </div>
         </div>
       )}
-      {geolocationOptIn && isLoading && <p>loading...</p>}
       <div className="absolute bottom-12 mx-auto flex space-x-4 rounded bg-neutral-900 p-6">
         <Button
           aria-label="Geolocation button"
@@ -53,23 +66,13 @@ const SunriseSunset = () => {
         >
           <MapPinIcon className="h-6 w-6" />
         </Button>
-        <input
-          className="rounded-lg border-black bg-neutral-700 p-2 text-neutral-300"
-          type="date"
-          value={date}
-          onChange={(event) => {
-            setDate(event.target.value);
-            refetch();
-          }}
+        <DatePicker date={date} handleDateChange={handleDateChange} />
+        <TwentyFourHourCheckbox
+          isTwentyFourHour={isTwentyFourHour}
+          handleTwentyFourHourChange={() =>
+            setIsTwentyFourHour(!isTwentyFourHour)
+          }
         />
-        <div className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={isTwentyFourHour}
-            onChange={() => setIsTwentyFourHour(!isTwentyFourHour)}
-          />
-          <label htmlFor="isTwentyFourHour">24-hour</label>
-        </div>
       </div>
     </div>
   );
