@@ -31,7 +31,7 @@
     "@tailwindcss/forms": "0.5.4",
     "@tanstack/react-query-devtools": "4.32.6",
     "@testing-library/dom": "9.3.1",
-    "@testing-library/jest-dom": "6.0.0",
+    "@testing-library/jest-dom": "6.0.1",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/react": "18.2.20",
