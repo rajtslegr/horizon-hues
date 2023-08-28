@@ -29,8 +29,8 @@ devDependencies:
     specifier: 1.37.1
     version: 1.37.1
   '@tailwindcss/forms':
-    specifier: 0.5.5
-    version: 0.5.5(tailwindcss@3.3.3)
+    specifier: 0.5.6
+    version: 0.5.6(tailwindcss@3.3.3)
   '@tanstack/react-query-devtools':
     specifier: 4.33.0
     version: 4.33.0(@tanstack/react-query@4.33.0)(react-dom@18.2.0)(react@18.2.0)
@@ -796,8 +796,8 @@ packages:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
     dev: true
 
-  /@tailwindcss/forms@0.5.5(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-03sXK1DcPt44GZ0Yg6AcAfQln89IKdbE79g2OwoKqBm1ukaadLO2AH3EiB3mXHeQnxa3tzm7eE0x7INXSjbuug==}
+  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
