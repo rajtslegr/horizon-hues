@@ -22,10 +22,10 @@ const useSunriseSunset = (
   { latitude, longitude, date }: QueryOptions,
   enabled: boolean,
 ) =>
-  useQuery<SunriseSunset>(
-    [`sunrise-sunset-${latitude}-${longitude}-${date}`],
-    () => fetchSunriseSunset({ latitude, longitude, date }),
-    { enabled },
-  );
+  useQuery<SunriseSunset>({
+    queryKey: [`sunrise-sunset-${latitude}-${longitude}-${date}`],
+    queryFn: () => fetchSunriseSunset({ latitude, longitude, date }),
+    enabled,
+  });
 
 export default useSunriseSunset;
