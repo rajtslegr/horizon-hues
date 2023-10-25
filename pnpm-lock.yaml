@@ -30,7 +30,7 @@ devDependencies:
     version: 1.39.0
   '@tailwindcss/forms':
     specifier: 0.5.6
-    version: 0.5.6(tailwindcss@3.3.4)
+    version: 0.5.6(tailwindcss@3.3.5)
   '@tanstack/react-query-devtools':
     specifier: 5.1.0
     version: 5.1.0(@tanstack/react-query@5.0.5)(react-dom@18.2.0)(react@18.2.0)
@@ -105,7 +105,7 @@ devDependencies:
     version: 4.6.0(eslint@8.52.0)
   eslint-plugin-tailwindcss:
     specifier: 3.13.0
-    version: 3.13.0(tailwindcss@3.3.4)
+    version: 3.13.0(tailwindcss@3.3.5)
   eslint-plugin-testing-library:
     specifier: 6.1.0
     version: 6.1.0(eslint@8.52.0)(typescript@5.2.2)
@@ -128,8 +128,8 @@ devDependencies:
     specifier: 3.0.3
     version: 3.0.3
   tailwindcss:
-    specifier: 3.3.4
-    version: 3.3.4
+    specifier: 3.3.5
+    version: 3.3.5
   typescript:
     specifier: 5.2.2
     version: 5.2.2
@@ -808,13 +808,13 @@ packages:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
     dev: true
 
-  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.4):
+  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.5):
     resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.3.4
+      tailwindcss: 3.3.5
     dev: true
 
   /@tanstack/query-core@5.0.5:
@@ -2432,7 +2432,7 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.4):
+  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.5):
     resolution: {integrity: sha512-Fcep4KDRLWaK3KmkQbdyKHG0P4GdXFmXdDaweTIPcgOP60OOuWFbh1++dufRT28Q4zpKTKaHwTsXPJ4O/EjU2Q==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -2440,7 +2440,7 @@ packages:
     dependencies:
       fast-glob: 3.2.12
       postcss: 8.4.31
-      tailwindcss: 3.3.4
+      tailwindcss: 3.3.5
     dev: true
 
   /eslint-plugin-testing-library@6.1.0(eslint@8.52.0)(typescript@5.2.2):
@@ -4561,8 +4561,8 @@ packages:
       tslib: 2.6.0
     dev: true
 
-  /tailwindcss@3.3.4:
-    resolution: {integrity: sha512-JXZNOkggUAc9T5E7nCrimoXHcSf9h3NWFe5sh36CGD/3M5TRLuQeFnQoDsit2uVTqgoOZHLx5rTykLUu16vsMQ==}
+  /tailwindcss@3.3.5:
+    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
