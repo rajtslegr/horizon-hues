@@ -3,12 +3,13 @@ import { useState } from 'react';
 import Button from '@button/components/Button';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import useSunriseSunset from '@sunrise-sunset/hooks/useSunriseSunset';
-import { timeFactory } from '@sunrise-sunset/utils/FormatDate';
-import { roundFloat } from '@sunrise-sunset/utils/RoundFloat';
+import { timeFactory } from '@sunrise-sunset/utils/formatDate';
+import { roundFloat } from '@sunrise-sunset/utils/roundFloat';
 import { format } from 'date-fns';
 import useGeolocation from 'react-hook-geolocation';
 
 import DatePicker from './DatePicker';
+import DaylightTracker from './DaylightTracker';
 import Item from './Item';
 import TwentyFourHourCheckbox from './TwentyFourHourCheckbox';
 
@@ -38,14 +39,14 @@ const SunriseSunset = () => {
   };
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center space-y-8 text-neutral-300">
+    <div className="flex h-full w-full flex-col items-center justify-center space-y-8 py-4 text-neutral-300">
       {!geolocationOptIn && (
         <p>Please allow access to geolocation service by clicking the icon.</p>
       )}
       {geolocationOptIn && isLoading && <p>Loading...</p>}
 
       {data && (
-        <div className="flex flex-col space-y-4 md:space-y-8">
+        <div className="flex w-4/5 flex-col space-y-4 md:space-y-8">
           <Item type="location" time={data?.results.timezone} />
           <div className="flex flex-row space-x-4 md:space-x-16">
             <Item
@@ -57,6 +58,10 @@ const SunriseSunset = () => {
               time={timeFactory(date, data?.results.sunset, isTwentyFourHour)}
             />
           </div>
+          <DaylightTracker
+            sunrise={timeFactory(date, data?.results.sunrise, true)}
+            sunset={timeFactory(date, data?.results.sunset, true)}
+          />
         </div>
       )}
       <div className="absolute bottom-12 mx-auto flex space-x-4 rounded bg-neutral-900 p-6">

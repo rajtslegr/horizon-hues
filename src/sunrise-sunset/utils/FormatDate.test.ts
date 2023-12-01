@@ -1,4 +1,4 @@
-import { timeFactory } from './FormatDate';
+import { timeFactory } from './formatDate';
 
 describe('timeFactory', () => {
   it('should format time to 24 hour format', () => {

@@ -1,4 +1,4 @@
-import { roundFloat } from './RoundFloat';
+import { roundFloat } from './roundFloat';
 
 // write a tests for roundFloat, write more tests cases for different floats and decimalPlaces every time
 describe('roundFloat', () => {
