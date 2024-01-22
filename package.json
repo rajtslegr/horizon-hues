@@ -30,7 +30,7 @@
   "devDependencies": {
     "@playwright/test": "1.41.1",
     "@tailwindcss/forms": "0.5.7",
-    "@tanstack/react-query-devtools": "5.17.19",
+    "@tanstack/react-query-devtools": "5.17.21",
     "@testing-library/dom": "9.3.4",
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
