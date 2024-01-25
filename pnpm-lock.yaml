@@ -116,8 +116,8 @@ devDependencies:
     specifier: 3.0.0
     version: 3.0.0(@typescript-eslint/eslint-plugin@6.19.1)(eslint@8.56.0)
   husky:
-    specifier: 9.0.4
-    version: 9.0.4
+    specifier: 9.0.5
+    version: 9.0.5
   jsdom:
     specifier: 24.0.0
     version: 24.0.0
@@ -3155,8 +3155,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: true
 
-  /husky@9.0.4:
-    resolution: {integrity: sha512-V3C/ksKcegckemdA20SxPC8x5OE2kVmiICCtChUCmaIKKF7mriBZIQd/7+cfyWkilI1OE1P8XlpMdOQE+IIcQA==}
+  /husky@9.0.5:
+    resolution: {integrity: sha512-/EX48XLor4FczjgdJjwK4qMETrJxJqF4rkgo+NUeK8b2F4TV6s5QxAuG2JZfxm4b9WnrgBGS7bA/JK+H5CKg+A==}
     engines: {node: '>=18'}
     hasBin: true
     dev: true
