@@ -28,7 +28,7 @@
     "react-hook-geolocation": "1.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.42.0",
+    "@playwright/test": "1.42.1",
     "@tailwindcss/forms": "0.5.7",
     "@tanstack/react-query-devtools": "5.24.1",
     "@testing-library/dom": "9.3.4",
