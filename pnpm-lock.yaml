@@ -40,17 +40,17 @@ importers:
         specifier: 5.49.2
         version: 5.49.2(@tanstack/react-query@5.49.2(react@18.3.1))(react@18.3.1)
       '@testing-library/dom':
-        specifier: 10.2.0
-        version: 10.2.0
+        specifier: 10.3.0
+        version: 10.3.0
       '@testing-library/jest-dom':
         specifier: 6.4.6
         version: 6.4.6(@types/jest@29.5.1)(vitest@1.6.0(@types/node@18.15.13)(@vitest/ui@1.6.0)(jsdom@24.1.0))
       '@testing-library/react':
         specifier: 16.0.0
-        version: 16.0.0(@testing-library/dom@10.2.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 16.0.0(@testing-library/dom@10.3.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@testing-library/user-event':
         specifier: 14.5.2
-        version: 14.5.2(@testing-library/dom@10.2.0)
+        version: 14.5.2(@testing-library/dom@10.3.0)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -612,8 +612,8 @@ packages:
     peerDependencies:
       react: ^18.0.0
 
-  '@testing-library/dom@10.2.0':
-    resolution: {integrity: sha512-CytIvb6tVOADRngTHGWNxH8LPgO/3hi/BdCEHOf7Qd2GvZVClhVP0Wo/QHzWhpki49Bk0b4VT6xpt3fx8HTSIw==}
+  '@testing-library/dom@10.3.0':
+    resolution: {integrity: sha512-pT/TYB2+IyMYkkB6lqpkzD7VFbsR0JBJtflK3cS68sCNWxmOhWwRm1XvVHlseNEorsNcxkYsb4sRDV3aNIpttg==}
     engines: {node: '>=18'}
 
   '@testing-library/jest-dom@6.4.6':
@@ -3172,7 +3172,7 @@ snapshots:
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.5
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@babel/compat-data@7.24.4': {}
 
@@ -3264,7 +3264,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.5
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@babel/parser@7.24.5':
     dependencies:
@@ -3494,7 +3494,7 @@ snapshots:
       fast-glob: 3.3.2
       is-glob: 4.0.3
       open: 9.1.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       tslib: 2.6.2
 
   '@playwright/test@1.45.0':
@@ -3564,7 +3564,7 @@ snapshots:
       '@tanstack/query-core': 5.49.1
       react: 18.3.1
 
-  '@testing-library/dom@10.2.0':
+  '@testing-library/dom@10.3.0':
     dependencies:
       '@babel/code-frame': 7.24.2
       '@babel/runtime': 7.23.2
@@ -3589,19 +3589,19 @@ snapshots:
       '@types/jest': 29.5.1
       vitest: 1.6.0(@types/node@18.15.13)(@vitest/ui@1.6.0)(jsdom@24.1.0)
 
-  '@testing-library/react@16.0.0(@testing-library/dom@10.2.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@testing-library/react@16.0.0(@testing-library/dom@10.3.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.23.2
-      '@testing-library/dom': 10.2.0
+      '@testing-library/dom': 10.3.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
 
-  '@testing-library/user-event@14.5.2(@testing-library/dom@10.2.0)':
+  '@testing-library/user-event@14.5.2(@testing-library/dom@10.3.0)':
     dependencies:
-      '@testing-library/dom': 10.2.0
+      '@testing-library/dom': 10.3.0
 
   '@types/aria-query@5.0.1': {}
 
@@ -6372,7 +6372,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.0
       escalade: 3.1.1
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   uri-js@4.4.1:
     dependencies:
