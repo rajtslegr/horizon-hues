@@ -34,8 +34,8 @@ importers:
         specifier: 1.46.1
         version: 1.46.1
       '@tailwindcss/forms':
-        specifier: 0.5.7
-        version: 0.5.7(tailwindcss@3.4.10)
+        specifier: 0.5.8
+        version: 0.5.8(tailwindcss@3.4.10)
       '@tanstack/react-query-devtools':
         specifier: 5.52.2
         version: 5.52.2(@tanstack/react-query@5.52.2(react@18.3.1))(react@18.3.1)
@@ -594,10 +594,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tailwindcss/forms@0.5.7':
-    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
+  '@tailwindcss/forms@0.5.8':
+    resolution: {integrity: sha512-DJs7B7NPD0JH7BVvdHWNviWmunlFhuEkz7FyFxE4japOWYMLl9b1D6+Z9mivJJPWr6AEbmlPqgiFRyLwFB1SgQ==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20'
 
   '@tanstack/query-core@5.52.2':
     resolution: {integrity: sha512-9vvbFecK4A0nDnrc/ks41e3UHONF1DAnGz8Tgbxkl59QcvKWmc0ewhYuIKRh8NC4ja5LTHT9EH16KHbn2AIYWA==}
@@ -3353,7 +3353,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.21.0':
     optional: true
 
-  '@tailwindcss/forms@0.5.7(tailwindcss@3.4.10)':
+  '@tailwindcss/forms@0.5.8(tailwindcss@3.4.10)':
     dependencies:
       mini-svg-data-uri: 1.4.4
       tailwindcss: 3.4.10
